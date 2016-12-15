@@ -1,6 +1,5 @@
 import ipaddress, subprocess, socket, sys, os, shlex, struct, getopt
 from ctypes import windll, create_string_buffer
-from socket import *
 
 def LANScan():
     global net_addr
@@ -16,7 +15,7 @@ def LANScan():
         all_hosts = list(ip_net.hosts())
         LANScan2()
     except KeyboardInterrupt:
-       print("You did not enter a valid IP\n")
+       print("\nKeyboard Interrupt\n")
        started = True
 
 def LANScan2():
@@ -42,7 +41,7 @@ def LANScan2():
         else:
             try:
                 hostn = socket.gethostbyaddr(str(all_hosts[i]))[0]
-            except:
+            except socket.herror:
                 hostn = "N/A"
             print(str(all_hosts[i]), "is Online" , "        ", hostn)
 
