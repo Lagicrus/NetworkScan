@@ -30,11 +30,8 @@ class all():
         for i in range(len(all_hosts)):
             output = subprocess.Popen(['ping', '-n', '1', '-w', '500', str(all_hosts[i])], stdout=subprocess.PIPE, startupinfo=info).communicate()[0]
             if "Destination host unreachable" in output.decode('utf-8'):
-                #print(str(all_hosts[i]), "is Offline")
                 iw += 1
             elif "Request timed out" in output.decode('utf-8'):
-                #print(output.decode("utf-8"))
-                #print(str(all_hosts[i]), "is Offline")
                 iq += 1
             else:
                 try:
@@ -110,7 +107,6 @@ class all():
                 loss = loss[:1]
         print("")
         print(formatt.format("It took %s hops to get to its destination"%(64 - TTL)))
-        #print(formatt.format("It went through %s routes and switches to get there"%(64 - TTL)))
         print(formatt.format("Average time to destination is %s"%(averagems)))
         print(formatt.format("Sent %s packets to get their with a %s%% loss"%(packets,loss)),"\n")
         finished = True
