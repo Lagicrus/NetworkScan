@@ -119,7 +119,6 @@ def reply():
             loss = loss[:1]
     print("")
     print(formatt.format("It took %s hops to get to its destination"%(64 - TTL)))
-    #print(formatt.format("It went through %s routes and switches to get there"%(64 - TTL)))
     print(formatt.format("Average time to destination is %s"%(averagems)))
     print(formatt.format("Sent %s packets to get their with a %s%% loss"%(packets,loss)),"\n")
     finished = True
