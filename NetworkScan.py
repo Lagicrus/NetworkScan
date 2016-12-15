@@ -1,10 +1,3 @@
-#https://docs.python.org/2/library/string.html
-#https://gist.github.com/jtriley/1108174
-#http://stackoverflow.com/questions/3431498/what-code-can-i-use-to-check-if-python-is-running-in-idle
-#http://stackoverflow.com/questions/3559559/how-to-delete-a-character-from-a-string-using-python
-#http://serverfault.com/questions/309357/ping-a-specific-port
-#http://www.tutorialspoint.com/python/python_command_line_arguments.htm
-
 import ipaddress, subprocess, socket, sys, os, shlex, struct, getopt
 from ctypes import windll, create_string_buffer
 from socket import *
